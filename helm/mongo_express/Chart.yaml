@@ -1,0 +1,16 @@
+apiVersion: v2
+
+# Chart name
+name: svr-mongo-express
+
+# Description of the chart
+description: A Helm chart to deploy mongo express in to Kubernetes
+
+# Type Application | Library
+type: application
+
+# Chart Version
+version: 1.0.0
+
+# Application Version
+appVersion: "1.0.0"

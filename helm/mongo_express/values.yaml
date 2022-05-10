@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  imageName: mongo-express
+  imageTag: latest
+  imagePullPolicy: IfNotPresent
+  containerPort: 27017
+
+mongodb:
+  secretName: mongodb-secret
+  rootUserKey: mongodb-root-username
+  rootUserPasswordKey: mongodb-root-password
+  configMapName: mongodb-configmap
+  configMapDbUrlKey: database_url
+
+service:
+  type: ClusterIP
+  protocol: TCP
+  port: 8081
+  targetPort: 8081
+

@@ -1,0 +1,19 @@
+replicaCount: 1
+
+image:
+  imageName: mongo
+  imageTag: latest
+  imagePullPolicy: IfNotPresent
+  containerPort: 27017
+
+mongodb:
+  secretName: mongodb-secret
+  rootUserKey: mongodb-root-username
+  rootUserPasswordKey: mongodb-root-password
+
+service:
+  type: ClusterIP
+  protocol: TCP
+  port: 27017
+  targetPort: 27017
+
